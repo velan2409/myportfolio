@@ -3,54 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WP | GOLD SMITH </title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,500&family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+    <title>Owner Profile & Resume</title>
     <style>
-        :root { --dark: #050505; --white: #ffffff; --gold: #c5a059; }
-        body, html { margin: 0; padding: 0; width: 100%; height: 100%; background-color: var(--dark); font-family: 'Poppins', sans-serif; overflow: hidden; }
-        
-        #loader { position: fixed; inset: 0; background: #000; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 9999; transition: opacity 0.8s ease, transform 1s cubic-bezier(0.7, 0, 0.3, 1); }
-        .exit-anim { opacity: 0; transform: scale(1.1); pointer-events: none; }
-
-        .loader-content { display: flex; flex-direction: column; align-items: center; position: relative; }
-        
-        .loader-logo { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 8vw, 4rem); color: var(--white); letter-spacing: 20px; text-transform: uppercase; margin-bottom: 40px; background: linear-gradient(90deg, #111, #fff, #111); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: shine 3s linear infinite; }
-        
-        @keyframes shine { to { background-position: 200% center; } }
-
-        .bar-wrapper { width: 300px; position: relative; }
-        .progress-container { width: 100%; height: 1px; background: rgba(255,255,255,0.05); position: relative; overflow: visible; }
-        .progress-fill { position: absolute; height: 100%; width: 0%; background: var(--gold); box-shadow: 0 0 20px var(--gold); animation: fillBar 3s cubic-bezier(0.65, 0, 0.35, 1) forwards; }
-        
-        .status-text { color: var(--gold); font-size: 0.6rem; letter-spacing: 5px; text-transform: uppercase; margin-top: 15px; opacity: 0.5; animation: pulse 2s infinite; }
-
-        .signature-box { margin-top: 50px; transform: scale(0.8); }
-        .jv-path { stroke: var(--gold); stroke-width: 2; fill: none; stroke-dasharray: 600; stroke-dashoffset: 600; animation: writeJV 2.5s ease-in-out forwards; }
-
-        @keyframes fillBar { 100% { width: 100%; } }
-        @keyframes writeJV { to { stroke-dashoffset: 0; } }
-        @keyframes pulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.7; } }
+        body { font-family: sans-serif; line-height: 1.6; display: flex; justify-content: center; padding: 50px; background-color: #f4f4f9; }
+        .card { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; max-width: 400px; }
+        .btn { display: inline-block; background: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 20px; transition: background 0.3s; }
+        .btn:hover { background: #0056b3; }
     </style>
 </head>
 <body>
-    <div id="loader">
-        <div class="loader-content">
-            <div class="loader-logo">WP Ornaments</div>
-            <div class="bar-wrapper">
-                <div class="progress-container"><div class="progress-fill"></div></div>
-            </div>
-            <div class="status-text">Synchronizing Heritage</div>
-            
-        </div>
+
+    <div class="card">
+        <h2>Content Owner</h2>
+        <p><strong>Name:</strong> VELAN P</p>
+        <p><strong>Role:</strong> INFORAMTION TECHNOLOGY </p>
+        <p>Passionate about building clean interfaces and solving complex problems with simple code.</p>
+
+        <hr>
+
+        <p>Interested in working together?</p>
+        <a href="resume.pdf" download="Alex_Johnson_Resume" class="btn">
+            Download Resume (PDF)
+        </a>
     </div>
 
-    <script>
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('loader').classList.add('exit-anim');
-                setTimeout(() => { window.location.href = 'sec.html'; }, 800);
-            }, 3000);
-        });
-    </script>
 </body>
 </html>
